@@ -1,8 +1,20 @@
 {
-  "name": "@zeit-now-monorepo",
+  "name": "zeit-now-monorepo-shared",
   "version": "0.0.1",
   "main": "index.js",
   "author": "Joseph Cheng <indiejoseph@gmail.com>",
   "license": "MIT",
-  "description": ""
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "www-a",
+    "www-b",
+    "shared"
+  ],
+  "scripts": {
+    "start": "node packages/www-a/index.js"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
 }

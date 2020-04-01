@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "name": "www-a",
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@now/node",
+      "config": {
+        "includeFiles": [
+          "node_modules/shared/**"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/site/a",
+      "dest": "./index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "./index.js"
+    }
+  ]
+}
